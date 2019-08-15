@@ -1,0 +1,67 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>View trades</title>  
+    <link rel= "stylesheet" type= "text/css" href= "../static/styles/mystyle.css?v=3">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mystyle.css?v=3') }}">
+</head>  
+<body>
+    <header>
+        <div class="topPad">
+                <ul class="fullHeader">
+                    PersonaMX
+                    <li style="float: right">Login: user</li>
+                </ul>
+            </div>  
+        <div class="navContainer">
+            <nav>
+                <ul class="topnav">
+                    <li><a href="/add">Add trades</a></li>
+                    <li><a class="active" href="/view">View trades</a></li>
+                </ul>
+            </nav>
+        </div> 
+    </header>
+      <br><br><br>
+
+      <div class="container">            
+            <form action="/search" method="get">
+                <input type="text" id="id" name="id" placeholder="Trade ID">
+                <input type="submit" name="submit" value="Search trade">
+            </form>
+        </div>
+
+    <table>
+    <tr>
+            <th>Trade ID</th>
+            <th>Trade Date</th>
+            <th>Expire Date</th>
+            <th>Buy CPT</th>
+            <th>Sell CPT</th>
+            <th>Trade Status</th>
+            <th>Trade Type</th>
+            <th>Asset</th>
+            <th>Amount</th>
+            <th>Price</th>
+            <th>Vault</th>
+            <th>Delete</th>
+        </tr>
+    {% for trade in trades %}  
+        <tr>  
+            <td class="tid">{{ trade["_id"] }}</td>  
+            <td class="tdate">{{ trade["tdate"] }}</td>  
+            <td class="edate">{{ trade["edate"] }}</td>  
+            <td class="bcpt">{{ trade["bcpt"] }}</td>  
+            <td class="scpt">{{ trade["scpt"] }}</td>  
+            <td class="tstatus">{{ trade["tstatus"] }}</td>  
+            <td class="ttype">{{ trade["ttype"] }}</td>  
+            <td class="asset">{{ trade["asset"] }}</td>  
+            <td class="amount">{{ trade["amount"] }}</td>  
+            <td class="price">{{ trade["price"] }}</td>  
+            <td class="vault">{{ trade["tvault"] }}</td>  
+            <td class="func1"><a href="./remove?_id={{ trade['_id'] }}"><button type="submit">DELETE</button></a></td>  
+        </tr>  
+    {% endfor %}  
+    </table>
+</body>
+</html>  

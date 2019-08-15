@@ -1,0 +1,12 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Result</title>  
+    <link rel= "stylesheet" type= "text/css" href= "../static/styles/mystyle.css?v=3">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mystyle.css?v=3') }}"> 
+</head>  
+<body>  
+    <h3 style="text-align: center; color: white; padding: 20%;">{{msg}}</h3>  
+    <a style="position: absolute; bottom: 0; width: 100%;" href="/view"><button type="submit">View Shares</button></a>
+</body>  
+</html>  

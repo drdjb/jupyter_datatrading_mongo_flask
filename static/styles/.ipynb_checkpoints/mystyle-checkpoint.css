@@ -1,0 +1,153 @@
+
+input {
+	padding: 10px;
+}
+
+input[type="submit"]:hover {
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+table {
+	margin-left: 40%;
+}
+
+.pad {
+	width: 100%;
+}
+
+
+h2 {
+	text-align: center;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	background-color: rgb(36, 36, 36);
+}
+.navContainer {
+	width: 80%;
+	margin: 0 auto;
+	}
+	
+	header {
+		background-color: white;
+	width: 100%;
+	}
+	
+	header::after {
+	content: '';
+	display: table;
+	clear: both;
+	}
+	
+	
+	nav {
+	text-align: center;
+	
+	}
+	
+	nav ul {
+	margin: 3px;
+	padding: 0;
+	list-style: none;
+	
+	}
+	
+	nav li {
+	display: inline-block;
+
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 100px;
+	padding-right: 100px;
+	position: relative;	
+	}
+	
+	nav a {
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-family: Calibri, 'Trebuchet MS', sans-serif;
+	}
+	
+	nav a:hover {
+		font-weight: bold;
+	}
+	
+	nav a.active
+	{
+	font-weight: bold;
+	}
+	
+
+.topPad {
+	padding: 10px;
+	background-color: rgb(39, 128, 211);
+}
+
+.fullHeader {
+	color: white;
+	font-size: 12px;
+}
+
+.fullHeader li {
+
+	display: inline-block;
+	color: white;
+	font-size: 12px;
+	margin-right: 20px;
+}
+
+.container {
+	background-color: #f2f2f2;
+	max-width: 500px;
+	text-align: center;
+	margin: auto;
+	position: relative;
+	border-radius: 4px;
+	/*top: 2%; bottom: 0px; right: 0px; left: 0px;*/
+	padding: 20px;
+	margin-bottom: 50px;	
+	}
+
+input[type=text], input[type=number], select, textarea {
+	width: 100%;
+	padding: 12px;
+	
+	/*border-radius: 4px;*/
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+	max-height: 200px;
+	font-size: 13px;
+	}
+	
+	input[type=submit] {
+	background-color: rgb(27, 114, 228);
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 2px;
+	cursor: pointer;
+	width: 100%;
+	}
+	
+	input[type=submit]:hover {
+	opacity: 0.7;
+	}
+	
+	input[type=submit]:disabled {
+	background-color: rgb(189, 82, 82);
+	}
+	
+	input[type=submit]:disabled:hover {
+	cursor: default;
+	}
